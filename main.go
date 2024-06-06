@@ -57,7 +57,11 @@ func init() {
 	flag.Var(&gaugeSources, "gauge-query", "Name of file containing a gauge query.")
 
 	// Port registered at https://github.com/prometheus/prometheus/wiki/Default-port-allocations
-	*prometheusx.ListenAddress = ":9348"
+	port := os.Getenv("PORT")
+	if port == "" {
+		port = "9348"
+	}
+	*prometheusx.ListenAddress = ":" + port
 	log.SetFlags(log.LstdFlags | log.Lshortfile)
 }
 

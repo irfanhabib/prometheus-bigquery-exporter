@@ -8,5 +8,4 @@ RUN go vet && \
 
 FROM alpine:3.15
 COPY --from=builder /go/bin/prometheus-bigquery-exporter /app/bin/prometheus-bigquery-exporter
-EXPOSE 9348
 ENTRYPOINT  [ "/app/bin/prometheus-bigquery-exporter" ]
