@@ -14,6 +14,7 @@ import (
 	"strings"
 	"sync"
 	"time"
+	"os"
 
 	"github.com/m-lab/go/flagx"
 	"github.com/m-lab/go/prometheusx"
