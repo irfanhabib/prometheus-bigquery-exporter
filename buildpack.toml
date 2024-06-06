@@ -1,0 +1,2 @@
+[buildpack]
+name = "Prometheus BigQuery Exporter buildpack"
