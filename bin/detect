@@ -1,0 +1,9 @@
+#!/bin/bash
+
+if ! command -v go &> /dev/null
+then
+    echo "Go is not installed or not available in the PATH."
+    exit 1
+else
+    echo "Go is installed and available."
+fi
