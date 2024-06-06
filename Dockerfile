@@ -8,6 +8,6 @@ RUN go vet && \
     go get -t . && \
     go install .
 
-FROM heroku/heroku:22
-COPY --from=builder /go/bin/prometheus-bigquery-exporter /app/bin/prometheus-bigquery-exporter
-ENTRYPOINT  [ "/app/bin/prometheus-bigquery-exporter" ]
+# FROM heroku/heroku:22
+# COPY --from=builder /go/bin/prometheus-bigquery-exporter /app/bin/prometheus-bigquery-exporter
+# ENTRYPOINT  [ "/app/bin/prometheus-bigquery-exporter" ]
