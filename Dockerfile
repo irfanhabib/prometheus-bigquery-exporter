@@ -7,6 +7,6 @@ RUN go vet && \
     go install .
 
 FROM alpine:3.15
-COPY --from=builder /go/bin/prometheus-bigquery-exporter /bin/prometheus-bigquery-exporter
+COPY --from=builder /go/bin/prometheus-bigquery-exporter /app/bin/prometheus-bigquery-exporter
 EXPOSE 9348
-ENTRYPOINT  [ "/bin/prometheus-bigquery-exporter" ]
+ENTRYPOINT  [ "/app/bin/prometheus-bigquery-exporter" ]
